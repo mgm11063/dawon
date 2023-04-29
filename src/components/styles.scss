@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&display=swap");
+
+.full-width-image {
+  height: 250px;
+  width: 250px;
+  top: 0;
+  left: 0;
+}
+
+.image-text {
+  margin: auto;
+  padding-top: 5px;
+}
+
+.full-screen {
+  flex-direction: column;
+  margin: 1rem 1rem 0 0.5rem;
+  top: 0;
+  width: stretch;
+}
+
+.centered {
+  text-align: center;
+  margin: auto;
+}
+
+.background {
+  background-image:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/bgnd.png") ;
+  background-size: cover;
+}
+
+// ---------------
+
+.bg {
+  position:fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+
+main{
+  position: relative;
+  z-index: 10;
+}
+
+
+
+.gallery_box{
+  display: grid;
+  	grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+.gallery_box img{
+  display: block;
+  max-width: 270px;
+  
+}
